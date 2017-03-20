@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html ng-app="spring_aop">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Spring Boot AOP</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- CSS Plugins -->
+<link rel="stylesheet"
+	href="plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/font-awesome/css/font-awesome.min.css" />
+
+<!-- Local CSS -->
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<div ng-include="'navbar/nav-bar.html'"></div>
+
+	<section ng-controller="HomeController">
+		<div class="container">
+			<div class="col-lg-12">
+				<h2>{{title}} Controller</h2>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<!-- Js Plugins -->
+		<script src="plugins/bower_components/angular/angular.min.js"></script>
+		<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="plugins/bower_components/tether/dist/js/tether.min.js"></script>
+		<script
+			src="plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<!-- Local Scripts -->
+		<script src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script src="controllers/homeController.js"></script>
+	</section>
+</body>
+</html>
