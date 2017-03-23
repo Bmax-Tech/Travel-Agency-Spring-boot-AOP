@@ -1,15 +1,17 @@
 package com.mtit.spring_aop.assignment;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan("com.mtit.spring_aop.assignment")
+@SpringBootApplication
 public class Application {
+
+	static final Logger LOGGER = LogManager.getLogger(Application.class.getName());
+
 	public static void main(String[] args) {
+		LOGGER.info("Application Started");
 		SpringApplication.run(Application.class, args);
 	}
 }

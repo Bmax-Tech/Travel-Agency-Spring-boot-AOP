@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html ng-app="spring_aop">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Spring Boot AOP</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- CSS Plugins -->
+<link rel="stylesheet"
+	href="plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/angular-growl-v2/build/angular-growl.min.css" />
+
+<!-- Local CSS -->
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<div ng-include="'navbar/nav-bar.html'"></div>
+
+	<section ng-controller="UsersController" ng-init="__init()">
+		<div growl=""></div>
+		<div class="container">
+			<div class="col-lg-12">
+				<h2>Users</h2>
+			</div>
+			<div class="col-lg-12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Type</th>
+							<th>Available Credit</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="user in users">
+							<td>{{$index+1}}</td>
+							<td>{{user.name}}</td>
+							<td>{{user.email}}</td>
+							<td>{{user.type}}</td>
+							<td>{{user.credit_limit}}</td>
+							<td><button class="btn btn-default" type="button"
+									data-toggle="modal" data-target="#exampleModal"
+									ng-click="editUser(user.id,user.credit_limit)">Edit</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Edit Available
+							Credit</h5>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="recipient-name" class="form-control-label">Credit:</label>
+								<input type="number" class="form-control" ng-model="credit_limit" />
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" ng-click="update()">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section>
+		<!-- Js Plugins -->
+		<script src="plugins/bower_components/angular/angular.min.js"></script>
+		<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="plugins/bower_components/tether/dist/js/tether.min.js"></script>
+		<script
+			src="plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script
+			src="plugins/bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
+
+		<!-- Local Scripts -->
+		<script src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script src="controllers/usersController.js"></script>
+	</section>
+</body>
+</html>

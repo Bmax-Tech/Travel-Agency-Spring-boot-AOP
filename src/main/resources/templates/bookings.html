@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html ng-app="spring_aop">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Spring Boot AOP</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- CSS Plugins -->
+<link rel="stylesheet"
+	href="plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/angular-growl-v2/build/angular-growl.min.css" />
+
+<!-- Local CSS -->
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<div ng-include="'navbar/nav-bar.html'"></div>
+
+	<section ng-controller="BookingsController" ng-init="__init()">
+		<div growl=""></div>
+		<div class="container">
+			<div class="col-lg-12">
+				<h2>Bookings</h2>
+			</div>
+			<div class="col-lg-12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Flight Index</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Contact No</th>
+							<th>Address</th>
+							<th>Departure Date</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="booking in bookings">
+							<td>{{$index+1}}</td>
+							<td>{{booking.flight_id}}</td>
+							<td>{{booking.customer_name}}</td>
+							<td>{{booking.email}}</td>
+							<td>{{booking.contact_no}}</td>
+							<td>{{booking.address}}</td>
+							<td>{{booking.departure_date}}</td>
+							<td><button class="btn btn-danger" type="button"
+									ng-click="removeBooking(booking.id)">Remove</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<!-- Js Plugins -->
+		<script src="plugins/bower_components/angular/angular.min.js"></script>
+		<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="plugins/bower_components/tether/dist/js/tether.min.js"></script>
+		<script
+			src="plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script
+			src="plugins/bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
+
+		<!-- Local Scripts -->
+		<script src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script src="controllers/bookingsController.js"></script>
+	</section>
+</body>
+</html>

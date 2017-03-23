@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html ng-app="spring_aop">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Spring Boot AOP</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- CSS Plugins -->
+<link rel="stylesheet"
+	href="plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/angular-growl-v2/build/angular-growl.min.css" />
+
+<!-- Local CSS -->
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<div ng-include="'navbar/nav-bar.html'"></div>
+
+	<section ng-controller="HomeController" ng-init="__init()">
+		<div growl=""></div>
+		<div class="container">
+			<div class="col-lg-12">
+				<h2>Flights</h2>
+			</div>
+			<div class="col-lg-12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Code</th>
+							<th>Category</th>
+							<th>Airline</th>
+							<th>Av Seats</th>
+							<th>Source</th>
+							<th>Destination</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="flight in flights">
+							<td>{{$index+1}}</td>
+							<td>{{flight.code}}</td>
+							<td>{{flight.category}}</td>
+							<td>{{flight.airline}}</td>
+							<td>{{flight.av_seats}}</td>
+							<td>{{flight.source}}</td>
+							<td>{{flight.destination}}</td>
+							<td><button class="btn btn-primary" type="button"
+									data-toggle="modal" data-target="#exampleModal"
+									ng-click="openForm(flight.id)">Book</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Place Booking</h5>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="recipient-name" class="form-control-label">Customer
+									Name:</label> <input type="text" class="form-control"
+									ng-model="customer_name" />
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="form-control-label">Contact
+									No:</label> <input type="text" class="form-control"
+									ng-model="contact_no" />
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="form-control-label">Email:</label>
+								<input type="email" class="form-control" ng-model="email" />
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="form-control-label">Address:</label>
+								<textarea class="form-control" ng-model="address"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="form-control-label">Booking
+									Date:</label> <input type="date" class="form-control"
+									ng-model="booking_date" />
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="form-control-label">Departure
+									Date:</label> <input type="date" class="form-control"
+									ng-model="departure_date" />
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<!-- Js Plugins -->
+		<script src="plugins/bower_components/angular/angular.min.js"></script>
+		<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="plugins/bower_components/tether/dist/js/tether.min.js"></script>
+		<script
+			src="plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script
+			src="plugins/bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
+
+		<!-- Local Scripts -->
+		<script src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script src="controllers/homeController.js"></script>
+	</section>
+</body>
+</html>

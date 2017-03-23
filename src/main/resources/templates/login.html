@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html ng-app="spring_aop">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Spring Boot AOP</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- CSS Plugins -->
+<link rel="stylesheet"
+	href="plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="plugins/bower_components/font-awesome/css/font-awesome.min.css" />
+
+<!-- Local CSS -->
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<!-- <div ng-include="'navbar/nav-bar.html'"></div> -->
+
+	<section ng-controller="LoginController">
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4" style="padding:0px;">
+					<form action="/authlogin" method="post">
+					<div class="col-lg-12 login-box">
+						<h3 style="text-align:center;padding: 40px;">
+							<i class="fa fa-plane" aria-hidden="true"></i>&nbsp;&nbsp;Login
+						</h3>
+						<div class="input-group">
+						  <input type="text" class="form-control" style="margin-bottom: 20px;" ng-model="username" name="username" placeholder="Username" aria-describedby="basic-addon1"/>
+						</div>
+						<div class="input-group">
+						  <input type="password" class="form-control" style="margin-bottom: 20px;" ng-model="password" name="password" placeholder="Password" aria-describedby="basic-addon1"/>
+						</div>
+						<button class="btn btn-primary" type="submit" style="margin: 20px 0px 30px 0px;width: 100%;padding: 15px;">Login</button>
+					</div>
+					</form>
+				</div>
+				<div class="col-lg-4"></div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<!-- Js Plugins -->
+		<script src="plugins/bower_components/angular/angular.min.js"></script>
+		<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="plugins/bower_components/tether/dist/js/tether.min.js"></script>
+		<script
+			src="plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<!-- Local Scripts -->
+		<script src="js/app.js"></script>
+
+		<!-- Controller -->
+		<script src="controllers/loginController.js"></script>
+	</section>
+</body>
+</html>

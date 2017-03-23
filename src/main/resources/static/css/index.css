@@ -1,7 +1,13 @@
-.navbar-nav {
-	margin-left: 300px;
+.login-box {
+	box-shadow: 0px 0px 10px #949494;
+	margin-top: 40%;
+	background: #fbfbfb;
 }
 
-.navbar {
-	margin-bottom: 20px;
+.growl-container {
+	margin-top: 50px;
+}
+
+.table {
+	margin-top: 20px;
 }
