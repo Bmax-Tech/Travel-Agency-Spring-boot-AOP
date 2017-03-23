@@ -49,7 +49,7 @@ public class ViewController {
 			return "login";
 		}
 	}
-	
+
 	@RequestMapping("/bookings")
 	public String bookings() {
 		if (LoginSession.checkSession()) {
@@ -58,7 +58,7 @@ public class ViewController {
 			return "login";
 		}
 	}
-	
+
 	@RequestMapping("/users")
 	public String users() {
 		if (LoginSession.checkSession()) {
@@ -67,9 +67,7 @@ public class ViewController {
 			return "login";
 		}
 	}
-	
-	
-	
+
 	/**
 	 * get user
 	 * 
@@ -83,5 +81,25 @@ public class ViewController {
 			}
 		}
 		return null;
+	}
+	
+	
+	/**
+	 * ------------------------------------------------------------------
+	 *  Create User
+	 *  (Important - Should use this end point when no users found on DB)
+	 * ------------------------------------------------------------------
+	 */
+	@RequestMapping("/createUser")
+	public ModelAndView createUser(){
+		User user = new User();
+		user.setName("MTIT");
+		user.setType("admin");
+		user.setEmail("admin@bmaxtech.org");
+		user.setUsername("admin");
+		user.setPassword(Utility.md5("123"));
+		user.setCredit_limit(1000d);
+		userRepository.save(user);
+		return new ModelAndView("redirect:/");
 	}
 }

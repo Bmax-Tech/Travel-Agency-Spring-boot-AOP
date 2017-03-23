@@ -38,11 +38,11 @@ public class LoginSession {
 			return false;
 		}
 	}
-		
+
 	/**
 	 * Log out from application
 	 */
-	public static void logout(){
+	public static void logout() {
 		loggedUser = null;
 	}
 }

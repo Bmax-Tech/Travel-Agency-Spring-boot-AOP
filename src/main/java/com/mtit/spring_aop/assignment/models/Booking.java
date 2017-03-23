@@ -25,7 +25,7 @@ public class Booking {
 
 	@Column
 	private String email;
-	
+
 	@Column
 	private String address;
 

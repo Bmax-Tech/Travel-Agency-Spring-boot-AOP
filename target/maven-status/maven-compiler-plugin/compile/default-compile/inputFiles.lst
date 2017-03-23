@@ -3,12 +3,13 @@ E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\repository\UserRepository.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\models\Booking.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\common\LoginSession.java
-E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\models\Logger.java
+E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\aspect\UserLogginAspect.java
+E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\aspect\BookingLogginAspect.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\models\Flight.java
+E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\aspect\FlightLogginAspect.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\models\User.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\Application.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\common\Constants.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\controller\ApiController.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\controller\ViewController.java
-E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\repository\LoggerRepository.java
 E:\sliit\4 Year\1 semester\MTIT\Assignments\Spring-AOP\Travel-Agency-Spring-boot-AOP\src\main\java\com\mtit\spring_aop\assignment\repository\BookingRepository.java

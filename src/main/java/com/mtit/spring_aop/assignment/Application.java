@@ -11,7 +11,20 @@ public class Application {
 	static final Logger LOGGER = LogManager.getLogger(Application.class.getName());
 
 	public static void main(String[] args) {
-		LOGGER.info("Application Started");
+		LOGGER.info("///////////////////////////////////////////");
+		LOGGER.info("////                                   ////");
+		LOGGER.info("////       MTIT Assignment - II        ////");
+		LOGGER.info("////                                   ////");
+		LOGGER.info("////       Spring AOP                  ////");
+		LOGGER.info("////                                   ////");
+		LOGGER.info("////       Hibernate + Spring Boot     ////");
+		LOGGER.info("////                                   ////");
+		LOGGER.info("////   -----------------------------   ////");
+		LOGGER.info("////                                   ////");
+		LOGGER.info("////       @ Buwaneka Boralessa        ////");
+		LOGGER.info("////       @ Salika Irushan            ////");
+		LOGGER.info("////                                   ////");
+		LOGGER.info("///////////////////////////////////////////");
 		SpringApplication.run(Application.class, args);
 	}
 }

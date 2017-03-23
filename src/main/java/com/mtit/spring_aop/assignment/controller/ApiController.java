@@ -20,7 +20,6 @@ import com.mtit.spring_aop.assignment.models.Flight;
 import com.mtit.spring_aop.assignment.models.User;
 import com.mtit.spring_aop.assignment.repository.BookingRepository;
 import com.mtit.spring_aop.assignment.repository.FlightRepository;
-import com.mtit.spring_aop.assignment.repository.LoggerRepository;
 import com.mtit.spring_aop.assignment.repository.UserRepository;
 
 @RestController
@@ -30,9 +29,6 @@ public class ApiController {
 
 	@Autowired
 	private BookingRepository bookingRepository;
-
-	@Autowired
-	private LoggerRepository loggerRepository;
 
 	@Autowired
 	private UserRepository userRepository;
@@ -53,6 +49,28 @@ public class ApiController {
 		return this.getAllFlights();
 	}
 
+	/**
+	 * Make Booking
+	 * 
+	 * @param data
+	 * @return
+	 */
+	@RequestMapping(value = "/api/saveFlight", method = RequestMethod.POST)
+	public Flight saveFlight(@RequestBody String data) {
+		JSONObject flightData = this.parseData(data);
+
+		Flight flight = new Flight();
+		flight.setCode(flightData.get("code").toString());
+		flight.setAirline(flightData.get("airline").toString());
+		flight.setCategory(flightData.get("category").toString());
+		flight.setSource(flightData.get("source").toString());
+		flight.setDestination(flightData.get("destination").toString());
+		flight.setAv_seats(Integer.parseInt(flightData.get("seats").toString()));
+		flight.setStatus(true);		
+
+		return this.saveFlightInstance(flight);
+	}
+	
 	/**
 	 * Make Booking
 	 * 
@@ -130,6 +148,10 @@ public class ApiController {
 	 * ---------------------------------------------------------------------
 	 */
 
+	private Flight saveFlightInstance(Flight flight){
+		return flightRepository.save(flight);
+	}
+	
 	/**
 	 * Convert String into JSONObject
 	 * 

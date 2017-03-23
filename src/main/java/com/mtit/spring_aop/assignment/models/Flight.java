@@ -25,7 +25,7 @@ public class Flight {
 
 	@Column
 	private String source;
-	
+
 	@Column
 	private String destination;
 
