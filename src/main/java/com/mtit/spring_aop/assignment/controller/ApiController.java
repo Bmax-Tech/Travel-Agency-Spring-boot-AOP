@@ -136,10 +136,14 @@ public class ApiController {
 	 */
 	@RequestMapping(value = "/api/editUserCreditLimit", method = RequestMethod.POST)
 	public User editUserCreditLimit(@RequestBody String data) {
+		try{
 		JSONObject userData = this.parseData(data);
 		User user = this.getUser(Long.parseLong(userData.get("user_id").toString()));
 		user.setCredit_limit(Double.parseDouble(userData.get("credit_limit").toString()));
 		return this.editUser(user);
+		} catch (Exception e) {
+			return null;
+		}		
 	}
 
 	/**

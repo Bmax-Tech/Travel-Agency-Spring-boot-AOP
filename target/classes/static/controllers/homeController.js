@@ -67,6 +67,7 @@ app.controller('HomeController', function HomeController($scope, $http,
 				}
 			}).then(function(res) {
 				console.log(res);
+				$('#exampleModal').modal('hide')
 				growl.success("Booking Successful", config);
 			}, function(error) {
 				console.log(error);
@@ -102,6 +103,7 @@ app.controller('HomeController', function HomeController($scope, $http,
 				}
 			}).then(function(res) {
 				console.log(res);
+				$('#newModal').modal('hide')
 				growl.success("Flight Save Successful", config);
 				load();
 			}, function(error) {

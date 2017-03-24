@@ -35,6 +35,7 @@ app.controller('UsersController', function UsersController($scope, $http,
 				}
 			}).then(function(res) {
 				console.log(res);
+				$('#exampleModal').modal('hide')
 				growl.success("User Updated Successful", config);
 				load();
 			}, function(error) {
